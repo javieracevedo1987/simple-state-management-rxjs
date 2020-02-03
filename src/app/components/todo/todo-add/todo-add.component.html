@@ -1,0 +1,12 @@
+<section class="todo-add">
+  <input 
+    type="text" 
+    class="todo-add__input" 
+    [formControl]="title" 
+    (keydown.enter)="addTodo()">
+  <button 
+    class="todo-add__button" 
+    (click)="addTodo()">
+      ADD TODO
+  </button>
+</section>

@@ -1,0 +1,12 @@
+<section class="todo-list">
+  <ul class="todo-list__body">
+    <li *ngFor="let todo of todoList$ | async;let i = index "
+      class="todo-list__body--item" (dblclick)="complete(todo.id)"
+      [class.completed]="todo.isCompleted">
+      <div class="todo-list__body-text">
+        {{ todo.id }} {{ todo.title }}
+      </div>
+      <fa-icon [icon]="faTrashAlt" (click)="remove(i)"></fa-icon>
+    </li>
+  </ul>
+</section>
